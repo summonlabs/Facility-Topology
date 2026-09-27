@@ -1,0 +1,20 @@
+Facility Topology
+Copyright 2026 Summon Software Labs.
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Facility Topology is part of Data Center Control Plane (DCCP), Tranche 1:
+Canonical Facility State. It is repository 2 of 8 and owns the generation-bound
+structural model of the physical facility.
+
+Third-party notices
+-------------------
+
+This product includes no third-party source code and links no third-party
+libraries. It is implemented against the C++20 standard library and the
+operating-system interfaces it needs for durable atomic file replacement and
+advisory file locking.
+
+The canonical serialization format, the integrity digest (SHA-256, FIPS 180-4)
+and every identity, generation and epoch type are implemented in this
+repository.

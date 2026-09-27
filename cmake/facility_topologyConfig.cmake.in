@@ -1,0 +1,25 @@
+@PACKAGE_INIT@
+
+# Facility Topology - DCCP Tranche 1 (Canonical Facility State).
+#
+# Exported target:
+#   dccp::facility_topology        C++20 library
+#
+# Example:
+#   find_package(facility_topology 1.0 REQUIRED)
+#   target_link_libraries(app PRIVATE dccp::facility_topology)
+
+include(CMakeFindDependencyMacro)
+
+include("${CMAKE_CURRENT_LIST_DIR}/facility_topologyTargets.cmake")
+
+set(FACILITY_TOPOLOGY_LIBRARIES dccp::facility_topology)
+set(FACILITY_TOPOLOGY_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/@CMAKE_INSTALL_INCLUDEDIR@")
+
+if(NOT TARGET dccp::facility_topology)
+  set(facility_topology_FOUND FALSE)
+  set(facility_topology_NOT_FOUND_MESSAGE "the facility_topology export set did not provide dccp::facility_topology")
+  return()
+endif()
+
+check_required_components(facility_topology)
