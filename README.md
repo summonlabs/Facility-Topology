@@ -4,10 +4,7 @@ Generation-bound structural model of a data center facility: buildings, halls,
 rooms, rows, racks, zones, containment, physical adjacency, references to power
 and cooling domains, and facility-level dependency structure.
 
-**DCCP position.** Data Center Control Plane (DCCP), Tranche 1 — Canonical
-Facility State. Repository 2 of 8. DCCP is the facility-wide composition and
-authority layer above Accelerated Systems Infrastructure (ASI) and Distributed
-Fabric Infrastructure (DFI). This repository owns the authoritative physical
+This repository owns the authoritative physical
 model of the data center: what exists, where it exists, how it is related, which
 generation is current, and which state higher control layers may trust.
 
@@ -51,7 +48,7 @@ generation is current, and which state higher control layers may trust.
 | Capacity planning, placement optimisation, reservations | future consumers |
 | Electrical actuation, cooling control, BMS integration | power/cooling control planes |
 | Maintenance orchestration, tenancy policy, incident response, dashboards | other control planes |
-| Multi-site federation | out of scope for Tranche 1 |
+| Multi-site federation | out of scope |
 
 Power and cooling domains are **references only**. A `DomainAssociation` records
 that a structural node references a domain declared in the same generation. It
